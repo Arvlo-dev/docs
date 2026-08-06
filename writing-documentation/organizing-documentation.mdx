@@ -1,11 +1,205 @@
-# Organizing Documentation
+---
+title: Organizing Documentation
+description: Learn how to organize your documentation using the sidebar, nested pages, categories, and custom ordering.
+---
+
+Documentation that's well organized makes it easier for your users to find the information they need. Arvlo has multiple ways to structure your documentation, including categories, nested pages, and custom ordering.
 
 ## Sidebar Navigation
+The sidebar is the primary way users navigate your documentation. Every published page appears in the sidebar unless it has been hidden.
+
+As your documentation grows, keeping the sidebar organized becomes increasingly important.
+
+A well-structured sidebar should:
+
+- Group related pages together.
+- Keep section names short and descriptive.
+- Follow a logical learning path.
+- Avoid overwhelming users with too many top-level pages.
+
+For example:
+
+```text
+Getting Started
+├── Welcome
+├── Create Your First Project
+└── Project Dashboard
+
+Writing Documentation
+├── Creating Documentation
+├── Organizing Documentation
+├── Markdown Guide
+└── Custom Components
+
+Releases
+├── Creating Releases
+└── Release Notes
+```
+
+Your users should be able to understand where information lives by simply scanning the sidebar.
 
 ## Nesting Pages
 
+Pages can be nested beneath other pages to create a hierarchy.
+
+For example:
+
+```text
+API
+├── Authentication
+├── Users
+│   ├── Create User
+│   ├── Update User
+│   └── Delete User
+└── Organizations
+```
+
+Nesting is useful for grouping related documentation together without cluttering the top level of the sidebar.
+
+Avoid creating deeply nested structures. In most cases, two or three levels of nesting are enough.
+
+Good:
+
+```text
+Guides
+└── Authentication
+    └── OAuth
+```
+
+Less ideal:
+
+```text
+Guides
+└── Authentication
+    └── OAuth
+        └── Providers
+            └── Google
+                └── Enterprise
+```
+
+If your documentation reaches this level of depth, consider splitting it into multiple categories instead.
+
 ## Ordering Pages
+Pages appear in the order you define within each category or parent page.
+
+Arrange pages so they follow the order users naturally complete tasks.
+
+For example, instead of:
+
+```text
+Configuration
+Installation
+FAQ
+Quick Start
+```
+
+Use:
+
+```text
+Quick Start
+Installation
+Configuration
+FAQ
+```
+
+A logical progression helps readers move through your documentation without jumping between unrelated topics.
+
+As a general rule:
+
+1. Start with introductory content.
+2. Follow with setup or installation.
+3. Explain core features.
+4. Cover advanced topics.
+5. End with troubleshooting or reference material.
 
 ## Categories
+Categories divide your documentation into high-level sections.
+
+Examples include:
+
+- Getting Started
+- Guides
+- API Reference
+- Integrations
+- Releases
+- Troubleshooting
+
+Each category should represent a broad topic rather than a single feature.
+
+Good categories:
+
+- Getting Started
+- Authentication
+- API
+- Integrations
+
+Less useful categories:
+
+- Buttons
+- Settings Page
+- Text Editor
+
+If a category only contains one or two pages, consider merging it into another section.
+
+Likewise, if a category grows to dozens of pages, consider splitting it into multiple smaller categories.
 
 ## Best Practices
+Keep these recommendations in mind as your documentation grows.
+
+### Think Like a New User
+
+Organize documentation around the questions users ask—not around your application's internal implementation.
+
+Instead of:
+
+```text
+Database
+Authentication
+Redis
+Workers
+```
+
+Consider:
+
+```text
+Getting Started
+Account Management
+Integrations
+Deployment
+```
+
+### Keep Categories Broad
+Categories should be stable over time.
+
+It's better to add pages inside an existing category than constantly create new top-level sections.
+
+### Keep Pages Focused
+Each page should explain one topic well.
+
+Instead of creating one large page covering multiple unrelated subjects, split the content into smaller pages.
+
+### Build a Learning Path
+Whenever possible, arrange documentation so users naturally progress from beginner topics to advanced concepts.
+
+For example:
+
+```text
+Welcome
+↓
+Create Your First Project
+↓
+Writing Documentation
+↓
+Publishing Documentation
+↓
+Releases
+↓
+Analytics
+```
+
+### Review Your Sidebar Regularly
+As new features are added, revisit your documentation structure.
+
+If users struggle to find information, consider reorganizing categories, renaming pages, or simplifying your navigation.
+
+A clean sidebar is one of the biggest contributors to a great documentation experience.
