@@ -1,11 +1,115 @@
-# Creating Documentation
+---
+title: Creating Documentation
+description: Learn how to create documentation pages, add metadata, write content, and preview your changes.
+---
+
+Creating documentation in Arvlo is easy. Every page consists of metadata that describes the page and Markdown content that your users will read.
+
+Whether you're writing a quick guide, API reference, or tutorial, the workflow is the same: create a page, add its metadata, write your content, save your changes, and preview the final result before publishing.
 
 ## Creating a Page
+To create a new documentation page:
+
+1. Open your project.
+2. Navigate to **Documentation**.
+3. Click **New Page**.
+4. Enter a page title.
+5. Choose where the page should appear in your documentation.
+6. Begin writing your content.
+
+New pages are created as drafts, allowing you to work on them before publishing.
+
+Choose page titles that clearly describe the content. Users should understand what they'll find before opening the page.
+
+Good examples:
+
+- Installation
+- Authentication
+- API Reference
+- Deployment
+- Troubleshooting
+
+Avoid vague titles like:
+
+- Info
+- Notes
+- Misc
+- Stuff
 
 ## Page Metadata
+Every documentation page begins with a frontmatter block.
+
+```md
+---
+title: Installation
+description: Learn how to install the Arvlo SDK.
+---
+```
+
+Arvlo currently supports the following fields:
+
+| Field | Description | Required |
+| ----- | ----------- | :------: |
+| `title` | The page title displayed at the top of the page. | ✅ |
+| `description` | A short summary used for SEO and search results. | Recommended |
+
+The page title defined in the frontmatter is automatically rendered as the page's heading. You do not need to add a separate `# Heading` inside your Markdown.
+
+A good description should briefly explain what readers will learn from the page.
 
 ## Writing Content
+Arvlo uses Markdown to write documentation.
+
+You can write:
+
+- Headings
+- Paragraphs
+- Lists
+- Tables
+- Images
+- Links
+- Code blocks
+- Task lists
+
+In addition to standard Markdown, Arvlo provides custom components such as callouts, tabs, cards, steps, recipes, API blocks, and more.
+
+If you're new to Markdown, see the **Markdown Guide**. To learn about Arvlo-specific components, continue to the **Custom Components** guide.
+
+When writing documentation:
+
+- Explain one topic per page.
+- Keep paragraphs short.
+- Include examples whenever possible.
+- Use headings to break up long sections.
+- Link related pages together.
 
 ## Saving Changes
+Changes are saved as drafts while you work.
+
+Saving your work does not publish the page or make it visible to visitors.
+
+Drafts allow you to:
+
+- Continue editing later.
+- Collaborate with teammates.
+- Review content before publishing.
+- Prepare documentation alongside upcoming releases.
+
+You can save as often as needed while writing.
 
 ## Previewing Documentation
+Before publishing, preview your documentation to see exactly how it will appear to your users.
+
+Previewing allows you to verify:
+
+- Markdown formatting.
+- Images.
+- Links.
+- Tables.
+- Code blocks.
+- Custom components.
+- Overall layout.
+
+Taking a few moments to preview your page helps catch formatting issues, broken links, or missing content before it becomes publicly available.
+
+A quick preview before every publish is one of the easiest ways to maintain high-quality documentation.
