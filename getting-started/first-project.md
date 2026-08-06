@@ -1,10 +1,15 @@
 # Creating Your First Project
-## Creating a project
 
-## Choosing a project name
+## Before You Begin
 
-## Project URL/slug
+## Creating a Project
 
-## Visibility
+## Project Information
 
-## Initial setup checklist
+## Project Visibility
+
+## Creating Your First Documentation Page
+
+## Publishing Your Project
+
+## What's Next?

@@ -1,12 +1,11 @@
 # Welcome
+
 ## What is Arvlo?
 
-## Who these docs are for
+## Why Use Arvlo?
 
-## Core concepts
-### Project
-### Documentation Pages
-### Releases
-### Journeys
-### Insights
-### PUblic Site
+## Core Concepts
+
+## Documentation Structure
+
+## Next Steps

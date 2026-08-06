@@ -1,8 +1,11 @@
 # Project Dashboard
-## Dashboard overview
+
+## Dashboard Overview
 
 ## Navigation
 
-## Quick actions
+## Recent Activity
 
-## Recent activity
+## Quick Actions
+
+## Project Statistics
