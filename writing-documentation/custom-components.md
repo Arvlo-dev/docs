@@ -16,7 +16,6 @@ export const cards = [
 ];
 
 ## Callout
-
 <Tabs>
   <Tab label="Preview">
 
@@ -61,10 +60,7 @@ This is the style applied if the card type is set to "success."
   </Tab>
 </Tabs>
 
----
-
 ## Card Grid
-
 <Tabs>
   <Tab label="Preview">
 
@@ -81,10 +77,7 @@ This is the style applied if the card type is set to "success."
   </Tab>
 </Tabs>
 
----
-
 ## Tabs
-
 <Tabs>
   <Tab label="Preview">
 
@@ -129,7 +122,6 @@ pnpm add astro
   </Tab>
 </Tabs>
 
----
 
 ## File Tree
 
@@ -191,7 +183,6 @@ children: [
   </Tab>
 </Tabs>
 
----
 
 ## Steps
 
@@ -227,10 +218,7 @@ children: [
   </Tab>
 </Tabs>
 
----
-
 ## Do's and Don'ts
-
 <Tabs>
   <Tab label="Preview">
 
@@ -263,10 +251,7 @@ children: [
   </Tab>
 </Tabs>
 
----
-
 ## API Block
-
 <Tabs>
   <Tab label="Preview">
 
@@ -335,10 +320,7 @@ description: "Invalid request body.",
   </Tab>
 </Tabs>
 
----
-
 ## Recipe
-
 <Tabs>
   <Tab label="Preview">
 
@@ -398,10 +380,7 @@ Your file is now available in S3.
   </Tab>
 </Tabs>
 
----
-
 ## Tooltip
-
 <Tabs>
   <Tab label="Preview">
 
@@ -417,11 +396,8 @@ A <Tooltip text="A unique identifier for a record.">UUID</Tooltip> is generated 
 
   </Tab>
 </Tabs>
-
----
 
 ## Version Badge
-
 <Tabs>
   <Tab label="Preview">
 
@@ -437,11 +413,8 @@ A <Tooltip text="A unique identifier for a record.">UUID</Tooltip> is generated 
 
   </Tab>
 </Tabs>
-
----
 
 ## Status Badge
-
 <Tabs>
   <Tab label="Preview">
 
@@ -460,10 +433,7 @@ A <Tooltip text="A unique identifier for a record.">UUID</Tooltip> is generated 
   </Tab>
 </Tabs>
 
----
-
 ## Doc Card
-
 <Tabs>
   <Tab label="Preview">
 
