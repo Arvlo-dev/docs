@@ -271,6 +271,37 @@ Use colons in the separator row to control column alignment:
 
 Tables work best for concise, comparable values. For long explanations, use headings or lists instead.
 
+## Code blocks
+
+Add a language after the opening fence to enable syntax highlighting. Use `title` (or `filename`) to label the block, and a comma-separated range in braces to emphasize important lines.
+
+````md
+```ts title="src/client.ts" {2,4-6}
+const client = createClient();
+await client.connect();
+const result = await client.query();
+render(result);
+reportSuccess();
+cleanup();
+```
+````
+
+Published code blocks include a **123** control that lets readers show or hide line numbers. The preference is remembered across documentation pages.
+
+## Mermaid diagrams
+
+Use a `mermaid` fenced code block to render flowcharts, sequence diagrams, and other Mermaid diagram types.
+
+````md
+```mermaid
+flowchart LR
+    Draft --> Review
+    Review --> Publish
+```
+````
+
+Arvlo renders diagrams in both the editor preview and the published documentation site.
+
 ## Blockquotes
 
 Use blockquotes to visually separate quotations, notes, or emphasized information from the surrounding content.

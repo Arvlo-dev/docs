@@ -15,6 +15,16 @@ export const cards = [
   }
 ];
 
+## Reusable snippets
+
+Database-backed projects can reuse the same Markdown or MDX across multiple pages. Open **Project tools → Reusable snippets**, create a named snippet, and insert it into a page:
+
+```mdx
+<Snippet name="authentication-note" />
+```
+
+When the snippet is updated, every draft, preview, and published page that references it uses the latest content. Snippet tags inside fenced code examples are left unchanged.
+
 ## Callout
 <Tabs>
   <Tab label="Preview">
@@ -55,6 +65,161 @@ This is the style applied if the card type is set to "success."
 <Callout title="Success" type="success">
   This is the style applied if the card type is set to "success."
 </Callout>
+```
+
+  </Tab>
+</Tabs>
+
+## Metrics and progress
+
+Use compact metrics for release results, service health, or adoption numbers. Progress values are clamped between 0 and 100.
+
+<Tabs>
+  <Tab label="Preview">
+
+<MetricGrid>
+  <Metric label="API uptime" value="99.98%" change="+0.12%" />
+  <Metric label="Open issues" value="7" change="-3 this week" />
+  <Metric label="Coverage" value="84%" change="Needs review" tone="warning" />
+</MetricGrid>
+
+<Progress label="Migration progress" value={72} description="18 of 25 services are using the new API." />
+
+  </Tab>
+  <Tab label="Code">
+
+```mdx
+<MetricGrid>
+  <Metric label="API uptime" value="99.98%" change="+0.12%" />
+  <Metric label="Open issues" value="7" change="-3 this week" />
+  <Metric label="Coverage" value="84%" change="Needs review" tone="warning" />
+</MetricGrid>
+
+<Progress
+  label="Migration progress"
+  value={72}
+  description="18 of 25 services are using the new API."
+/>
+```
+
+  </Tab>
+</Tabs>
+
+## Bar chart
+
+Bar charts are useful for small comparisons. Arvlo automatically scales the chart unless you provide a `max` value.
+
+<Tabs>
+  <Tab label="Preview">
+
+<BarChart
+  title="Requests by region"
+  description="Successful requests in the last 24 hours"
+  suffix="k"
+  data={[
+    { label: "US East", value: 48 },
+    { label: "US West", value: 34 },
+    { label: "Europe", value: 41 },
+    { label: "Asia", value: 27 },
+  ]}
+/>
+
+  </Tab>
+  <Tab label="Code">
+
+```mdx
+<BarChart
+  title="Requests by region"
+  description="Successful requests in the last 24 hours"
+  suffix="k"
+  data={[
+    { label: "US East", value: 48 },
+    { label: "US West", value: 34 },
+    { label: "Europe", value: 41 },
+    { label: "Asia", value: 27 },
+  ]}
+/>
+```
+
+  </Tab>
+</Tabs>
+
+## Image gallery
+
+Galleries scroll horizontally on smaller screens and use snap points for easier browsing.
+
+<Tabs>
+  <Tab label="Preview">
+
+<ImageGallery
+  images={[
+    { src: "/Logo Dark.png", alt: "Arvlo dark logo", caption: "Dark background" },
+    { src: "/Logo Light.png", alt: "Arvlo light logo", caption: "Light background" },
+    { src: "/Logo Frosted.png", alt: "Arvlo frosted logo", caption: "Frosted treatment" },
+  ]}
+/>
+
+  </Tab>
+  <Tab label="Code">
+
+```mdx
+<ImageGallery
+  images={[
+    { src: "/screenshots/dashboard.png", alt: "Project dashboard", caption: "Dashboard" },
+    { src: "/screenshots/editor.png", alt: "Documentation editor", caption: "Editor" },
+  ]}
+/>
+```
+
+  </Tab>
+</Tabs>
+
+## Expandable details
+
+Use expandable sections for optional context, troubleshooting notes, or long explanations.
+
+<Expandable title="Why does this request require an idempotency key?">
+The key prevents retries from creating the same resource more than once. Reuse it only when retrying the original request.
+</Expandable>
+
+```mdx
+<Expandable title="Why does this request require an idempotency key?">
+  The key prevents retries from creating the same resource more than once.
+</Expandable>
+```
+
+## Interactive checklist
+
+Checklist state is remembered on the reader's device when `storageKey` is set. Keep that key stable so progress survives page reloads.
+
+<Tabs>
+  <Tab label="Preview">
+
+<Checklist
+  title="Launch checklist"
+  storageKey="launch-guide"
+  items={[
+    { label: "Create a project", complete: true },
+    { label: "Connect a repository" },
+    { label: "Review the preview" },
+    { label: "Publish the documentation" },
+  ]}
+/>
+
+  </Tab>
+  <Tab label="Code">
+
+```mdx
+<Checklist
+  title="Launch checklist"
+  storageKey="launch-guide"
+  items={[
+    { label: "Create a project", complete: true },
+    { label: "Connect a repository" },
+    { label: "Review the preview" },
+    { label: "Publish the documentation" },
+  ]}
+/>
 ```
 
   </Tab>
