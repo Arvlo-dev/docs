@@ -144,18 +144,54 @@ Bar charts are useful for small comparisons. Arvlo automatically scales the char
   </Tab>
 </Tabs>
 
+## Mermaid diagrams
+
+Use a `mermaid` code fence to turn Mermaid syntax into a rendered diagram. Flowcharts, sequence diagrams, state diagrams, and the other Mermaid diagram types work in previews and published pages.
+
+<Tabs>
+  <Tab label="Preview">
+
+```mermaid
+flowchart LR
+    Draft[Write documentation] --> Review{Ready?}
+    Review -->|Yes| Publish[Publish page]
+    Review -->|No| Draft
+```
+
+  </Tab>
+  <Tab label="Code">
+
+````md
+```mermaid
+flowchart LR
+    Draft[Write documentation] --> Review{Ready?}
+    Review -->|Yes| Publish[Publish page]
+    Review -->|No| Draft
+```
+````
+
+  </Tab>
+</Tabs>
+
 ## Image gallery
 
-Galleries scroll horizontally on smaller screens and use snap points for easier browsing.
+Galleries scroll horizontally and use snap points for easier browsing. Set `autoScroll` to advance automatically, customize the delay with `interval` in milliseconds, and use `pauseOnHover` or `loop` to control the behavior.
 
 <Tabs>
   <Tab label="Preview">
 
 <ImageGallery
+  autoScroll={true}
+  interval={3500}
+  pauseOnHover={true}
+  loop={true}
   images={[
-    { src: "/Logo Dark.png", alt: "Arvlo dark logo", caption: "Dark background" },
-    { src: "/Logo Light.png", alt: "Arvlo light logo", caption: "Light background" },
-    { src: "/Logo Frosted.png", alt: "Arvlo frosted logo", caption: "Frosted treatment" },
+    { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80", alt: "Mountains reflected in a lake", caption: "Alpine lake" },
+    { src: "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=80", alt: "City skyline at night", caption: "City lights" },
+    { src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80", alt: "Tropical beach and turquoise water", caption: "Tropical coast" },
+    { src: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80", alt: "Sunlight through a dense forest", caption: "Forest trail" },
+    { src: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1200&q=80", alt: "Desert rock formations", caption: "Desert landscape" },
+    { src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80", alt: "Cabin beside a mountain lake", caption: "Quiet retreat" },
   ]}
 />
 
@@ -164,6 +200,10 @@ Galleries scroll horizontally on smaller screens and use snap points for easier 
 
 ```mdx
 <ImageGallery
+  autoScroll={true}
+  interval={3500}
+  pauseOnHover={true}
+  loop={true}
   images={[
     { src: "/screenshots/dashboard.png", alt: "Project dashboard", caption: "Dashboard" },
     { src: "/screenshots/editor.png", alt: "Documentation editor", caption: "Editor" },
@@ -583,20 +623,26 @@ A <Tooltip text="A unique identifier for a record.">UUID</Tooltip> is generated 
 <Tabs>
   <Tab label="Preview">
 
-<Status type="beta" />
-<Status type="deprecated" label="Removed soon" />
+<Status type="stable" icon="circle-check" />
+<Status type="beta" icon="flask-conical" color="violet" />
+<Status type="deprecated" label="Removed soon" icon="triangle-alert" color="red" />
+<Status type="new" label="Just shipped" icon="rocket" library="fontawesome" color="blue" />
 
   </Tab>
 
   <Tab label="Code">
 
 ```mdx
-<Status type="beta" />
-<Status type="deprecated" label="Removed soon" />
+<Status type="stable" icon="circle-check" />
+<Status type="beta" icon="flask-conical" color="violet" />
+<Status type="deprecated" label="Removed soon" icon="triangle-alert" color="red" />
+<Status type="new" label="Just shipped" icon="rocket" library="fontawesome" color="blue" />
 ```
 
   </Tab>
 </Tabs>
+
+Badge colors include `green`, `lime`, `teal`, `cyan`, `blue`, `violet`, `pink`, `rose`, `amber`, `orange`, `red`, and `gray`. You can also pass a hex, RGB, or HSL color.
 
 ## Doc Card
 <Tabs>
