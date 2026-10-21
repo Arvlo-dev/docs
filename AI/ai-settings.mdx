@@ -1,9 +1,26 @@
+---
+title: AI Settings
+description: Configure the docs-grounded AI assistant for a project.
+---
+
 # AI Settings
 
-## AI Configuration
+Project owners can enable an AI assistant on published documentation.
 
-## Prompt Settings
+1. Open **Project tools → Project settings**.
+2. Find **AI documentation assistant**.
+3. Enable **AI chatbot**.
+4. Add an OpenRouter API key.
+5. Enter an OpenRouter model slug.
+6. Describe the desired response style.
+7. Save changes.
 
-## Knowledge Sources
+When enabled, an **Ask AI** button appears on the published site. API keys are encrypted at rest. Leaving the key field blank during a later update keeps the stored key.
 
-## Privacy
+The default requested model is `google/gemma-4-31b-it:free`. If a configured free model is unavailable, Arvlo can fall back to `openrouter/free`.
+
+## Knowledge and privacy
+
+On each question, Arvlo supplies the assistant with the project's visible, published pages. It instructs the model to answer only from those sources. The reader's question, up to eight recent chat messages, and documentation context are sent to OpenRouter.
+
+Requests are limited to eight per browser session per minute. Arvlo stores a short-lived request record for rate limiting and records normal reader analytics for the interaction.

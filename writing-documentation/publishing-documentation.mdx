@@ -1,69 +1,32 @@
 ---
 title: Publishing Documentation
-description: Learn how to publish, preview, update, and unpublish documentation in Arvlo.
+description: Understand drafts, previews, publishing, hiding, and repository synchronization.
 ---
 
-Publishing makes your documentation available to your users. Before publishing, you can save drafts, preview your changes, and make updates without affecting your live documentation.
+# Publishing Documentation
 
-## Drafts
-Every documentation page begins as a draft.
+## Browser-edited projects
 
-Draft pages are only visible to members of your project and can be edited freely until you're ready to publish them.
+**Save draft** stores the current editor state without changing the live page. If a published version already exists, readers continue to see it. **Discard draft** removes the private changes. **Publish** makes the editor state live and stores the previous published version in revision history.
 
-Drafts are useful for:
+The rendered preview updates as you edit. It is the place to check Markdown, MDX components, links, reading layout, and metadata before publishing.
 
-- Writing new documentation.
-- Reviewing content before publishing.
-- Collaborating with your team.
-- Preparing documentation for an upcoming release.
+## Repository projects
 
-Saving a draft does **not** make the page publicly available.
+The repository is the source of truth. Commit changes to the configured branch, then choose **Refresh from Git** or let a configured provider webhook mark the project for synchronization. Arvlo publishes synchronized files unless they are hidden in navigation.
 
-## Preview Mode
-Before publishing, you can preview your documentation exactly as your users will see it.
+## Hide a page
 
-Preview Mode allows you to:
+Open **Project tools → Navigation & appearance**, clear **Published** for the page, and save navigation. Hiding removes the page from the public site without deleting its content.
 
-- Verify formatting.
-- Test links.
-- Review images and media.
-- Check custom components.
-- Ensure your content is ready for publication.
+### Page-editor unpublish action
 
-Previewing your documentation before publishing helps catch formatting issues and broken links before they reach your users.
+This has not yet been implemented.
 
-## Updating Existing Pages
-Published pages can be updated at any time.
+## Redirect moved pages
 
-When editing an existing page, your changes are saved separately until you publish them. This allows you to continue improving your documentation without immediately affecting the live version.
+When publishing a browser page changes its public path, Arvlo can suggest a redirect from the previous path. Review it under **Project tools → Redirects** so existing bookmarks and links continue to work.
 
-Common updates include:
+## Delete content
 
-- Correcting mistakes.
-- Adding new features.
-- Updating screenshots.
-- Improving explanations.
-- Revising code examples.
-
-After reviewing your changes in Preview Mode, publish the page again to make the latest version available.
-
-## Unpublishing Pages
-If a page is no longer relevant, it can be unpublished.
-
-Unpublishing removes the page from your public documentation while preserving its content within your project.
-
-This is useful when:
-
-- A feature has been removed.
-- Documentation is being rewritten.
-- A page was published accidentally.
-- Content is no longer intended for public access.
-
-Once unpublished, the page is no longer accessible to visitors until it is published again.
-
-## Best Practices
-- Review every page in Preview Mode before publishing.
-- Keep unfinished work as drafts until it's ready.
-- Update documentation whenever your product changes.
-- Remove or unpublish outdated documentation to keep your knowledge base accurate.
-- Treat your documentation like your product—keep it current, polished, and easy to trust.
+Browser-edited pages can be permanently deleted from **Project tools**. Repository pages must be deleted in Git or hidden from navigation. Deleting a project removes its project record, pages, revisions, and snippets.

@@ -1,205 +1,44 @@
 ---
 title: Organizing Documentation
-description: Learn how to organize your documentation using the sidebar, nested pages, categories, and custom ordering.
+description: Structure documentation with products, sections, pages, and reader selectors.
 ---
 
-Documentation that's well organized makes it easier for your users to find the information they need. Arvlo has multiple ways to structure your documentation, including categories, nested pages, and custom ordering.
+# Organizing Documentation
 
-## Sidebar Navigation
-The sidebar is the primary way users navigate your documentation. Every published page appears in the sidebar unless it has been hidden.
-
-As your documentation grows, keeping the sidebar organized becomes increasingly important.
-
-A well-structured sidebar should:
-
-- Group related pages together.
-- Keep section names short and descriptive.
-- Follow a logical learning path.
-- Avoid overwhelming users with too many top-level pages.
-
-For example:
-
-```text
-Getting Started
-├── Welcome
-├── Create Your First Project
-└── Project Dashboard
-
-Writing Documentation
-├── Creating Documentation
-├── Organizing Documentation
-├── Markdown Guide
-└── Custom Components
-
-Releases
-├── Creating Releases
-└── Release Notes
-```
-
-Your users should be able to understand where information lives by simply scanning the sidebar.
-
-## Nesting Pages
-
-Pages can be nested beneath other pages to create a hierarchy.
-
-For example:
+Arvlo uses products, sections, and pages.
 
 ```text
 API
-├── Authentication
-├── Users
-│   ├── Create User
-│   ├── Update User
-│   └── Delete User
-└── Organizations
+├── Getting started
+│   ├── Overview
+│   └── Authentication
+└── Reference
+    ├── Errors
+    └── Endpoints
 ```
 
-Nesting is useful for grouping related documentation together without cluttering the top level of the sidebar.
+Use a product for a distinct documentation set, a section for a broad topic, and a page for one focused reader task.
 
-Avoid creating deeply nested structures. In most cases, two or three levels of nesting are enough.
+## Nested pages
 
-Good:
+This has not yet been implemented.
 
-```text
-Guides
-└── Authentication
-    └── OAuth
-```
+## Organize in the dashboard
 
-Less ideal:
+Choose **Project tools → Navigation & appearance**. Browser-edited projects can create and rename products and sections, move pages between them, reorder pages and sections, publish or hide pages, and assign icons.
 
-```text
-Guides
-└── Authentication
-    └── OAuth
-        └── Providers
-            └── Google
-                └── Enterprise
-```
+Repository projects derive their initial structure from file paths and frontmatter. You can still reorder pages, assign icons, and hide files in Arvlo, but source paths remain managed in Git.
 
-If your documentation reaches this level of depth, consider splitting it into multiple categories instead.
+## Reader selectors
 
-## Ordering Pages
-Pages appear in the order you define within each category or parent page.
+Project owners can define up to ten selectors, such as Version, Framework, or Audience, in project settings. Each selector can have up to twelve choices.
 
-Arrange pages so they follow the order users naturally complete tasks.
+Use `readerContexts` frontmatter to limit a whole page to choices. Use the `Variant` custom component when only part of a page varies. The published navigation and search results respond to the reader's active choices.
 
-For example, instead of:
+## Keep the structure useful
 
-```text
-Configuration
-Installation
-FAQ
-Quick Start
-```
-
-Use:
-
-```text
-Quick Start
-Installation
-Configuration
-FAQ
-```
-
-A logical progression helps readers move through your documentation without jumping between unrelated topics.
-
-As a general rule:
-
-1. Start with introductory content.
-2. Follow with setup or installation.
-3. Explain core features.
-4. Cover advanced topics.
-5. End with troubleshooting or reference material.
-
-## Categories
-Categories divide your documentation into high-level sections.
-
-Examples include:
-
-- Getting Started
-- Guides
-- API Reference
-- Integrations
-- Releases
-- Troubleshooting
-
-Each category should represent a broad topic rather than a single feature.
-
-Good categories:
-
-- Getting Started
-- Authentication
-- API
-- Integrations
-
-Less useful categories:
-
-- Buttons
-- Settings Page
-- Text Editor
-
-If a category only contains one or two pages, consider merging it into another section.
-
-Likewise, if a category grows to dozens of pages, consider splitting it into multiple smaller categories.
-
-## Best Practices
-Keep these recommendations in mind as your documentation grows.
-
-### Think Like a New User
-
-Organize documentation around the questions users ask—not around your application's internal implementation.
-
-Instead of:
-
-```text
-Database
-Authentication
-Redis
-Workers
-```
-
-Consider:
-
-```text
-Getting Started
-Account Management
-Integrations
-Deployment
-```
-
-### Keep Categories Broad
-Categories should be stable over time.
-
-It's better to add pages inside an existing category than constantly create new top-level sections.
-
-### Keep Pages Focused
-Each page should explain one topic well.
-
-Instead of creating one large page covering multiple unrelated subjects, split the content into smaller pages.
-
-### Build a Learning Path
-Whenever possible, arrange documentation so users naturally progress from beginner topics to advanced concepts.
-
-For example:
-
-```text
-Welcome
-↓
-Create Your First Project
-↓
-Writing Documentation
-↓
-Publishing Documentation
-↓
-Releases
-↓
-Analytics
-```
-
-### Review Your Sidebar Regularly
-As new features are added, revisit your documentation structure.
-
-If users struggle to find information, consider reorganizing categories, renaming pages, or simplifying your navigation.
-
-A clean sidebar is one of the biggest contributors to a great documentation experience.
+- Put setup content before advanced workflows.
+- Keep section names short and stable.
+- Use descriptive page titles.
+- Hide obsolete repository files until they can be removed at the source.
+- Add redirects when a public path changes.

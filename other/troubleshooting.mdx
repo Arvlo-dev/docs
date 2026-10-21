@@ -1,11 +1,34 @@
+---
+title: Troubleshooting
+description: Resolve common publishing, synchronization, domain, search, and AI problems.
+---
+
 # Troubleshooting
 
-## Publishing Issues
+## A page is not public
 
-## Git Sync Problems
+For a browser-edited page, make sure you chose **Publish**, not only **Save draft**. Then open **Navigation & appearance** and confirm the page is marked **Published**. Repository pages can also be hidden there.
 
-## Search Issues
+## Git synchronization fails
 
-## Domain Issues
+Confirm the repository owner or project path, branch, and docs folder. Private GitHub repositories require a connected GitHub account. Private GitLab projects require a token with `read_repository`. Arvlo only imports `.md` and `.mdx` files.
 
-## AI Issues
+## A webhook does not update the project
+
+Confirm that its secret matches Arvlo, that the event targets the configured branch, and that the provider can reach the callback URL. You can always choose **Refresh from Git** to synchronize manually.
+
+## A custom domain does not connect
+
+Complete the steps in order: publish the TXT ownership record, verify ownership in Arvlo, add the displayed CNAME, enable Cloudflare proxying as instructed, then choose **Finish connection**. DNS changes may take time to propagate.
+
+## Search misses a page
+
+Make sure the page is published and visible. If reader selectors are active, confirm the page's contexts include the reader's selected values. Search only indexes visible documentation.
+
+## The AI assistant is unavailable
+
+Confirm it is enabled and has a valid OpenRouter key and model slug. Free models may be rate limited or temporarily unavailable; choose another model or try again later.
+
+## MDX does not render
+
+Review the page for unsupported syntax or an unclosed custom component. Repository pages show a parsing-error screen until the source is corrected and synchronized.

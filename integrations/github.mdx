@@ -1,9 +1,20 @@
+---
+title: GitHub
+description: Publish Markdown and MDX from a GitHub repository.
+---
+
 # GitHub
 
-## Connecting GitHub
+Create a project, choose **Connect GitHub**, and enter the repository owner, repository name, branch, and optional documentation folder. Arvlo recursively imports `.md` and `.mdx` files from that location.
 
-## Importing Repositories
+Public repositories can sync without an account connection. Connect GitHub during project creation or from project settings to access private repositories.
 
-## Syncing Documentation
+## Synchronization
 
-## Troubleshooting
+Choose **Project tools → Refresh from Git** to pull the current branch. Repository pages are read-only in Arvlo; edit or remove them in Git and sync again.
+
+When GitHub is connected, Arvlo attempts to provision a webhook automatically. Push and pull-request events mark the project for synchronization. Project settings show webhook status and provide an **Enable webhook** or **Reconnect webhook** action.
+
+## Navigation
+
+Arvlo derives navigation from the repository structure and supported frontmatter. You can reorder pages, assign icons, and hide files from the published site without changing the repository.

@@ -1,90 +1,42 @@
 ---
 title: Create Your First Project
-description: Learn how to create your first project and publish your documentation with Arvlo.
+description: Create an Arvlo project from a template, local files, GitHub, or GitLab.
 ---
 
-Projects are the foundation of every documentation site in Arvlo. Each project contains its own documentation, releases, collaborators, settings, analytics, and integrations.
+# Create Your First Project
 
-This guide walks you through creating your first project and publishing your documentation.
+From the dashboard, choose **New project**. The setup wizard asks how you want to start, collects the source details, and shows a final site preview before creation.
 
-## Before You Begin
-Before creating a project, consider a few things:
+## Choose a source
 
-- What product or service are you documenting?
-- Who is your target audience?
-- How would you like to organize your documentation?
-- Will multiple people collaborate on the project?
+### Starter template
 
-Having a rough outline before you begin makes organizing your documentation much easier later.
+Create a browser-edited project from a blank, API reference, library, or product-guide template. Template pages begin as private drafts.
 
-## Creating a Project
-To create a new project:
+### Import files
 
-1. Sign in to Arvlo.
-2. Open your dashboard.
-3. Click **New Project**.
-4. Enter your project information.
-5. Choose the project's visibility.
-6. Create the project.
+Import up to 100 `.md` or `.mdx` files. The combined upload must be smaller than 2 MB. Arvlo uses frontmatter titles when present, derives missing titles from filenames, and maps folders into products and sections.
 
-Your new project will be created immediately and you'll be taken to the project dashboard.
+### GitHub
 
-## Project Information
-Each project includes basic information that identifies your documentation.
+Enter an owner, repository, branch, and optional docs folder. Connect a GitHub account for private repository access and automatic webhook setup.
 
-Depending on your plan and configuration, this may include:
+### GitLab
 
-- Project name
-- Description
-- Project icon
-- URL slug
-- Branding
-- Custom domain
+Enter a GitLab URL, project path, branch, and optional docs folder. Private projects require an access token with `read_repository`. You can also enter the secret for a manually configured GitLab webhook.
 
-Choose a clear, recognizable project name that matches your product or service.
+## Project details
 
-You can update this information later from your project settings.
+Every project requires a name and a unique public URL slug. The description is optional but recommended because it appears in project and publishing metadata.
 
-## Project Visibility
-When creating a project, you'll choose who can access your documentation.
+Published pages are public; unfinished browser pages remain private as drafts or can be hidden from navigation.
 
-Public projects allow anyone with the link to view your documentation.
+### Project visibility controls
 
-Private projects restrict access to authorized users and collaborators.
+This has not yet been implemented.
 
-You can change your project's visibility later if your requirements change.
+## Publish the first page
 
-## Creating Your First Documentation Page
-Once your project has been created, it's time to add your first page.
+After creation, select a page in the project sidebar. For a browser-edited project, replace the starter text, check the rendered preview, and choose **Publish**. For a repository project, choose **Refresh from Git** if the initial synchronization has not populated pages yet.
 
-A good first page is usually:
-
-- Welcome
-- Getting Started
-- Installation
-- Quick Start
-
-Create a new page, add a title and description, then begin writing your documentation using Markdown.
-
-Every page begins as a draft, allowing you to review it before publishing.
-
-## Publishing Your Project
-Once you've written your first page, preview it to ensure everything looks correct.
-
-When you're ready, publish the page to make it available to your users.
-
-As your documentation grows, you can continue adding pages, organizing categories, and publishing updates whenever needed.
-
-## What's Next?
-Congratulations! You've created your first Arvlo project.
-
-From here, you can continue building your documentation by learning how to:
-
-- Create documentation pages.
-- Organize your documentation.
-- Use Markdown.
-- Add custom components.
-- Publish releases.
-- Collaborate with your team.
-
-Continue to **Creating Documentation** to start writing your documentation.
+Use **View published site** to verify the result.

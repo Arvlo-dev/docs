@@ -1,97 +1,40 @@
 ---
 title: Welcome
-description: Learn what Arvlo is, how it works, and how to get started building documentation.
+description: Learn how Arvlo turns Markdown and MDX into maintained documentation sites.
 ---
 
-Welcome to Arvlo!
+# Welcome
 
-Arvlo is a modern documentation platform designed to help teams create, organize, and publish beautiful documentation with ease. Whether you're documenting a product, API, SDK, or internal knowledge base, Arvlo provides the tools you need to keep your documentation organized and up to date.
+Arvlo is a documentation platform for writing, publishing, and improving product documentation. You can author in the browser, import existing Markdown or MDX, or synchronize a GitHub or GitLab repository.
 
-This guide introduces the core concepts of Arvlo and helps you understand how documentation is structured before you create your first project.
+## What Arvlo provides
 
-## What is Arvlo?
-Arvlo is a documentation platform built for developers, teams, and businesses.
+- A rendered MDX editor with private drafts and page revisions.
+- Published sites with search, responsive navigation, page feedback, suggestions, and generated social cards.
+- Products and sections for organizing multiple documentation sets.
+- GitHub and GitLab synchronization.
+- Documentation health, review reminders, answer gaps, and reader insights.
+- Releases, reader journeys, reusable support answers, snippets, and OpenAPI imports.
+- Optional Slack, Discord, outbound webhook, and docs-grounded AI integrations.
 
-With Arvlo, you can:
-
-- Create structured documentation.
-- Publish documentation to a public website.
-- Organize pages with categories and nested navigation.
-- Create release notes and changelogs.
-- Collaborate with teammates.
-- Track analytics and user engagement.
-- Enhance documentation with interactive components.
-
-Everything is designed around making documentation easy to write, maintain, and navigate.
-
-## Why Use Arvlo?
-Documentation is often the first experience users have with your product. Clear, well-organized documentation helps users find answers faster and reduces the time spent answering repetitive questions.
-
-Arvlo helps you:
-
-- Keep documentation organized as it grows.
-- Publish updates quickly.
-- Create consistent documentation across your team.
-- Improve the reader experience with interactive components.
-- Scale from small projects to large documentation sites.
-
-Whether you're launching a new product or maintaining an established platform, Arvlo grows with your documentation.
-
-## Core Concepts
-Before you begin, it's helpful to understand a few core concepts.
+## Core concepts
 
 ### Projects
-A project contains all of your documentation, releases, settings, and collaborators.
 
-Most users create one project for each product or service they maintain.
+A project contains pages, navigation, appearance, releases, reader activity, collaborators, and integrations. A project uses one source: the browser editor, GitHub, or GitLab.
 
-### Documentation Pages
-Documentation is organized into individual pages written in Markdown.
+### Products and sections
 
-Pages can be grouped into categories, nested beneath other pages, and organized however you like.
+Products are top-level documentation sets. Each product contains sections, and each section contains pages. This same structure becomes the published navigation.
 
-### Categories
-Categories divide your documentation into logical sections such as:
+### Drafts and published pages
 
-- Getting Started
-- Guides
-- API Reference
-- Releases
+Browser-edited pages can have a private draft while their last published version remains live. A new draft-only page is hidden until its first publish. Repository projects are edited in Git and synchronized into Arvlo.
 
-### Drafts
-Documentation begins as a draft and can be reviewed before publishing.
+### Reader signals
 
-Drafts are only visible to project members until they're published.
+Published sites collect anonymous page views, searches, helpful or unhelpful feedback, suggestions, journey activity, and support-answer views. Arvlo turns these signals into an improvement queue.
 
-### Publishing
-Publishing makes your documentation publicly available.
+## Next step
 
-You can continue editing published pages and publish updates whenever you're ready.
-
-## Documentation Structure
-A typical documentation site might look like this:
-
-```text
-Getting Started
-├── Welcome
-├── Create Your First Project
-└── Project Dashboard
-
-Writing Documentation
-├── Creating Documentation
-├── Organizing Documentation
-├── Markdown Guide
-└── Custom Components
-
-Releases
-├── Creating Releases
-└── Release Notes
-```
-
-As your documentation grows, you can add additional categories, nested pages, integrations, API references, and more.
-
-## Next Steps
-
-You're ready to create your first project.
-
-Continue to **Create Your First Project** to learn how to create a project, configure its settings, and publish your first documentation page.
+Continue to [Create Your First Project](./first-project) to choose a source and publish your first page.

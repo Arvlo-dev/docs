@@ -5,7 +5,7 @@ description: Learn how to write and format documentation using Markdown in Arvlo
 
 Markdown is a lightweight syntax for formatting documentation. This guide demonstrates the Markdown features supported by Arvlo.
 
-The page title is defined by the `title` field in frontmatter and is automatically displayed as the large heading at the top of the page. You generally do not need to add another level-one heading to your content.
+The `title` field in frontmatter supplies the title shown by the site shell. Include one level-one heading in the content as well: Arvlo's page-completion check looks for both level-one and level-two headings.
 
 ## Headings
 
@@ -47,7 +47,7 @@ Use headings to divide a page into sections and create a clear content hierarchy
 </Tab>
 </Tabs>
 
-Because the frontmatter `title` is displayed as the page's main heading, begin most sections with `## Heading 2`. Avoid skipping heading levels whenever possible.
+Use one `# Heading 1` for the page and begin its sections with `## Heading 2`. Avoid skipping heading levels whenever possible.
 
 ## Paragraphs
 
@@ -244,7 +244,6 @@ Use tables to present structured information in rows and columns.
 | --- | :---: | :---: | :---: |
 | Owner | Yes | Yes | Yes |
 | Editor | Yes | Yes | No |
-| Viewer | No | No | No |
 
 </Tab>
 
@@ -332,9 +331,9 @@ Use blockquotes to visually separate quotations, notes, or emphasized informatio
 
 For styled notices such as warnings, errors, or success messages, use Arvlo's `Callout` component instead.
 
-## Code Blocks
+### More code block examples
 
-Wrap multiline code in three backticks. Add a language after the opening backticks to enable syntax highlighting.
+Wrap multiline code in three backticks.
 
 <Tabs>
 <Tab label="Preview">

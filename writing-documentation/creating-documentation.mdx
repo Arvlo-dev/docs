@@ -1,115 +1,48 @@
 ---
 title: Creating Documentation
-description: Learn how to create documentation pages, add metadata, write content, and preview your changes.
+description: Create, edit, preview, and maintain pages in Arvlo.
 ---
 
-Creating documentation in Arvlo is easy. Every page consists of metadata that describes the page and Markdown content that your users will read.
+# Creating Documentation
 
-Whether you're writing a quick guide, API reference, or tutorial, the workflow is the same: create a page, add its metadata, write your content, save your changes, and preview the final result before publishing.
+## Browser-edited pages
 
-## Creating a Page
-To create a new documentation page:
+Open a browser-edited project and choose the **+** beside **Pages**. Enter the page fields and write MDX in the editor. The preview uses the same renderer as the published site.
 
-1. Open your project.
-2. Navigate to **Documentation**.
-3. Click **New Page**.
-4. Enter a page title.
-5. Choose where the page should appear in your documentation.
-6. Begin writing your content.
+Page fields include title, URL slug, description, product, section, content width, on-this-page navigation position, hero image URL, and reading metadata visibility.
 
-New pages are created as drafts, allowing you to work on them before publishing.
+Choose **Save draft** to keep changes private or **Publish** to make them live. New draft-only pages remain hidden until their first publish.
 
-Choose page titles that clearly describe the content. Users should understand what they'll find before opening the page.
+## Repository pages
 
-Good examples:
+For GitHub and GitLab projects, create or edit `.md` and `.mdx` files in the configured branch and docs folder. Choose **Refresh from Git**, or use a configured webhook, to synchronize. Repository content is read-only in the Arvlo dashboard.
 
-- Installation
-- Authentication
-- API Reference
-- Deployment
-- Troubleshooting
+## Frontmatter
 
-Avoid vague titles like:
+Frontmatter is supported for both repository and browser-edited pages.
 
-- Info
-- Notes
-- Misc
-- Stuff
-
-## Page Metadata
-Every documentation page begins with a frontmatter block.
-
-```md
+```yaml
 ---
-title: Installation
-description: Learn how to install the Arvlo SDK.
+title: Authentication
+description: Authenticate requests to the API.
+release: v2.4.0
+owner: Developer Experience
+reviewedBy: Quinn
+reviewedAt: 2026-10-21
+supportedVersions:
+  - v2
+readerContexts:
+  framework:
+    - React
 ---
 ```
 
-Arvlo currently supports the following fields:
+`title` and `description` populate page metadata. The remaining fields contribute review, release, compatibility, and reader-selector information. Browser page layout is configured in the editor rather than frontmatter.
 
-| Field | Description | Required |
-| ----- | ----------- | :------: |
-| `title` | The page title displayed at the top of the page. | ✅ |
-| `description` | A short summary used for SEO and search results. | Recommended |
+## Writing content
 
-The page title defined in the frontmatter is automatically rendered as the page's heading. You do not need to add a separate `# Heading` inside your Markdown.
+Arvlo supports GitHub-flavored Markdown, syntax-highlighted code fences, Mermaid diagrams, and its documented custom MDX components. Use a single `#` heading for page health checks even though the page title is also rendered by the site shell.
 
-A good description should briefly explain what readers will learn from the page.
+## Revision history
 
-## Writing Content
-Arvlo uses Markdown to write documentation.
-
-You can write:
-
-- Headings
-- Paragraphs
-- Lists
-- Tables
-- Images
-- Links
-- Code blocks
-- Task lists
-
-In addition to standard Markdown, Arvlo provides custom components such as callouts, tabs, cards, steps, recipes, API blocks, and more.
-
-If you're new to Markdown, see the **Markdown Guide**. To learn about Arvlo-specific components, continue to the **Custom Components** guide.
-
-When writing documentation:
-
-- Explain one topic per page.
-- Keep paragraphs short.
-- Include examples whenever possible.
-- Use headings to break up long sections.
-- Link related pages together.
-
-## Saving Changes
-Changes are saved as drafts while you work.
-
-Saving your work does not publish the page or make it visible to visitors.
-
-Drafts allow you to:
-
-- Continue editing later.
-- Collaborate with teammates.
-- Review content before publishing.
-- Prepare documentation alongside upcoming releases.
-
-You can save as often as needed while writing.
-
-## Previewing Documentation
-Before publishing, preview your documentation to see exactly how it will appear to your users.
-
-Previewing allows you to verify:
-
-- Markdown formatting.
-- Images.
-- Links.
-- Tables.
-- Code blocks.
-- Custom components.
-- Overall layout.
-
-Taking a few moments to preview your page helps catch formatting issues, broken links, or missing content before it becomes publicly available.
-
-A quick preview before every publish is one of the easiest ways to maintain high-quality documentation.
+Publishing a change to an existing browser-edited page stores the prior published version. Open **Project tools → Revision history** to compare or restore it. Repository projects use Git history instead.

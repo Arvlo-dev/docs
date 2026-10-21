@@ -1,9 +1,26 @@
+---
+title: Sharing Documentation
+description: Share a published site, individual pages, support answers, or the Help Dock.
+---
+
 # Sharing Documentation
 
-## Public Links
+## Published links
 
-## Private Documentation
+Choose **View published site** from the project sidebar to open the public documentation. You can share the project URL or any page URL. Hidden pages and draft-only pages are not listed publicly.
 
-## Sharing Pages
+## Private documentation
 
-## Embedding Documentation
+This has not yet been implemented.
+
+## Shareable support answers
+
+In **Reader insights → Answers**, create an answer with a title, optional introduction, and one or more source pages. Arvlo creates a stable `/a/<token>` link that continues to render content from its selected sources.
+
+## Embedding search
+
+Embed `/embed/<project-slug>` in an iframe or webview to add the responsive Help Dock to your product. It searches the latest published pages.
+
+## Export-friendly endpoints
+
+Each project provides `llms.txt`, `llms-full.txt`, a release RSS feed, and a Markdown representation for individual pages. Readers can also choose **Copy page as Markdown** from a published page.

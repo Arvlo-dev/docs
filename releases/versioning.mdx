@@ -1,11 +1,29 @@
+---
+title: Versioning
+description: Use release labels and page version metadata in Arvlo.
+---
+
 # Versioning
 
-## Semantic Versioning
+Arvlo accepts any unique text value as a release version.
 
-## Major Releases
+## Semantic version validation and automatic increments
 
-## Minor Releases
+This has not yet been implemented.
 
-## Patch Releases
+Repository pages can declare release and compatibility metadata in frontmatter:
 
-## Versioning Best Practices
+```yaml
+---
+release: v2.4.0
+supportedVersions:
+  - v2
+  - v1
+---
+```
+
+The latest published project release contributes to page trust. A page is considered current when its `release` value matches that release. `supportedVersions` can also drive a configured version reader selector.
+
+## Browser controls for page release metadata
+
+This has not yet been implemented.

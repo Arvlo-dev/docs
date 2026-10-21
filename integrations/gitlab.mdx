@@ -1,9 +1,20 @@
+---
+title: GitLab
+description: Publish Markdown and MDX from GitLab.com or self-managed GitLab.
+---
+
 # GitLab
 
-## Connecting GitLab
+Create a project, choose **Connect GitLab**, and enter the GitLab URL, project path, branch, and optional documentation folder. For a private project, provide an access token with `read_repository`.
 
-## Importing Projects
+Arvlo recursively imports `.md` and `.mdx` files. Repository pages are read-only in Arvlo; update them in GitLab and choose **Project tools → Refresh from Git**.
 
-## Syncing Documentation
+## Automatic updates
 
-## Troubleshooting
+In GitLab, create a webhook that points to the URL shown in **Project settings → GitLab source**. Enable Push and Merge Request events, and use the same secret token in GitLab and Arvlo.
+
+When Arvlo receives a valid event for the configured branch, it marks the project for synchronization.
+
+## Self-managed instances
+
+Set **GitLab URL** to the base URL of your instance. The instance must be reachable by the Arvlo server.
